@@ -10,7 +10,7 @@ const createArticle = (req,res) => {
         req.body.title,
         req.body.content,
         req.body.author,
-        req.body.createdTime
+        new Date()
     ]
     db.base(sql, data, (result)=>{
         if (result.length ==1){
