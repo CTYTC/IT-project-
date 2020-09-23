@@ -28,9 +28,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', mainPageRouter);
-app.use('/article',articleRouter);
+app.use('/article',galleryRouter);
 app.use('/login',loginRouter);
-app.use('/gallery', articleRouter);
 
 db.sequelize.sync({ force: true }).then(() => {
     console.log("Drop and re-sync db.");
