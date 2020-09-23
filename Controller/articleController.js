@@ -28,7 +28,7 @@ const retrieveArticles = (req,res) => {
         if (result.length ==1){
             res.send("Retrieve Articles Successful")
         }else{
-            res.render('articlePage', {titles: result})
+            res.render('articlePage', {articles: result})
         }
     })
 }

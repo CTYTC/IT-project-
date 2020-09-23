@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c4a9e20-95e2-4bf9-bb1a-63b847504c4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Controller/galleryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/image.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/galleryRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/galleryPage.art" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/loginPage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/loginPage.art" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/articleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/articleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/mainPage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/mainPage.art" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -38,12 +51,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -75,11 +89,22 @@
       <updated>1599829583900</updated>
       <workItem from="1599829585265" duration="8253000" />
       <workItem from="1599883191456" duration="5439000" />
-      <workItem from="1600501753075" duration="1409000" />
+      <workItem from="1600501753075" duration="2936000" />
+      <workItem from="1600680059133" duration="7449000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" width="997" height="708" key="SettingsEditor" timestamp="1600858497118">
+      <screen x="0" y="23" width="1280" height="708" />
+    </state>
+    <state x="0" y="23" width="997" height="708" key="SettingsEditor/0.23.1280.708@0.23.1280.708" timestamp="1600858497118" />
+    <state x="325" y="83" width="683" height="306" key="find.popup" timestamp="1600680355782">
+      <screen x="0" y="23" width="1280" height="706" />
+    </state>
+    <state x="325" y="83" width="683" height="306" key="find.popup/0.23.1280.706@0.23.1280.706" timestamp="1600680355782" />
   </component>
 </project>
