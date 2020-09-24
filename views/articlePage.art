@@ -1,19 +1,19 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Article</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Blog</title>
+
 </head>
 <body>
-    {{each articles}}
-        {{$value}}}
-    {{/each}}
-<form action="/article/createArticle" method="post">
-    title：<input type="text" name="title">
-    content：<input type="text" name="content">
-    author：<input type="text" name="author">
-    <input type="submit" value="submit">
-      <div>test</div>
-</form>
+<div class = "container">
+    <h1 class = "mb-4">Blog articles</h1>
+    <a href="/article/modifyArticle" class="btn btn-success">New article</a>
+
+</div>
+
 </body>
 </html>

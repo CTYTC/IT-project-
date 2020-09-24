@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1c4a9e20-95e2-4bf9-bb1a-63b847504c4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modifyArticle.art" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/loginPage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/loginPage.art" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/articleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/articleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/articleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/articleRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/articlePage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/articlePage.art" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,16 +59,24 @@
   <component name="ProjectId" id="1hilKQrCZ7SegqhgMIcMjB9zoOb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -51,18 +84,17 @@
       <recent name="D:\MelbourneUni\subjects\it\IT-project-" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="Node.js.app.js" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -76,10 +108,40 @@
       <workItem from="1599829585265" duration="8253000" />
       <workItem from="1599883191456" duration="5439000" />
       <workItem from="1600501753075" duration="1409000" />
+      <workItem from="1600951702019" duration="2638000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1600961008849">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1600961008849" />
+    <state width="1259" height="176" key="GridCell.Tab.0.center" timestamp="1600961008845">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="176" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1600961008845" />
+    <state width="1259" height="176" key="GridCell.Tab.0.left" timestamp="1600961008843">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="176" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1600961008843" />
+    <state width="1259" height="176" key="GridCell.Tab.0.right" timestamp="1600961008847">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="176" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1600961008847" />
   </component>
 </project>

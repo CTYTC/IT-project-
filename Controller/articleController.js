@@ -1,28 +1,37 @@
 const db = require('../model/index');
+const body = require("ejs");
 
 const getArticlePage = (req,res) => {
-    res.render('articlePage',{})
-};
-
-const createArticle = (req,res) => {
-    var sql = 'INSERT INTO articles (title, content, author, createdTime) VALUES ？';
-    var data = [
-        req.body.title,
-        req.body.content,
-        req.body.author,
-        new Date()
-    ]
+    const sql = 'SELECT title FROM article';
+    const data = [];
     db.base(sql, data, (result)=>{
         if (result.length ==1){
-            res.send("Create Article Successful")
+            res.send("Retrieve Articles Successful")
         }else{
-            console.log(result)
+            res.render('articlePage', {titles: result})
         }
     })
-}
+};
+
+const createArticle = (req, res) =>{
+    const sql = 'INSERT INTO article (title, description, content) VALUE (?, ?, ?)'
+    const data = [
+        req.body.title,
+        req.body.description,
+        req.body.content
+    ]
+    db.base(sql, data, (result)=>{
+        if (result){
+            res.send("Create Article Successful")
+        }else{
+            res.send('?')
+        }
+    })
+};
+
 
 const retrieveArticles = (req,res) => {
-    var sql = 'SELECT title FROM articles';
+    const sql = 'SELECT title FROM article';
     var data = []
     db.base(sql, data, (result)=>{
         if (result.length ==1){
@@ -33,8 +42,13 @@ const retrieveArticles = (req,res) => {
     })
 }
 
+const getModifyPage = (req, res) =>{
+    res.render('modifyArticle')
+}
+
 module.exports = {
     getArticlePage,
     createArticle,
     retrieveArticles,
+    getModifyPage
 };
