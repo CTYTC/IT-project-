@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c4a9e20-95e2-4bf9-bb1a-63b847504c4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/modifyArticle.art" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/articleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/articleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/articleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/articleRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/articlePage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/articlePage.art" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modifyArticle.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/modifyArticle.art" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,8 @@
       <workItem from="1599829585265" duration="8253000" />
       <workItem from="1599883191456" duration="5439000" />
       <workItem from="1600501753075" duration="1409000" />
-      <workItem from="1600951702019" duration="2638000" />
+      <workItem from="1600951702019" duration="3470000" />
+      <workItem from="1601003934483" duration="118000" />
     </task>
     <servers />
   </component>
@@ -125,23 +123,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1600961008849">
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1600962374053">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1600961008849" />
-    <state width="1259" height="176" key="GridCell.Tab.0.center" timestamp="1600961008845">
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1600962374053" />
+    <state width="1259" height="176" key="GridCell.Tab.0.center" timestamp="1600962374052">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1600961008845" />
-    <state width="1259" height="176" key="GridCell.Tab.0.left" timestamp="1600961008843">
+    <state width="1259" height="176" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1600962374052" />
+    <state width="1259" height="176" key="GridCell.Tab.0.left" timestamp="1600962374051">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1600961008843" />
-    <state width="1259" height="176" key="GridCell.Tab.0.right" timestamp="1600961008847">
+    <state width="1259" height="176" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1600962374051" />
+    <state width="1259" height="176" key="GridCell.Tab.0.right" timestamp="1600962374052">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1600961008847" />
+    <state width="1259" height="176" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1600962374052" />
   </component>
 </project>

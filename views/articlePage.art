@@ -9,8 +9,14 @@
 
 </head>
 <body>
+
 <div class = "container">
     <h1 class = "mb-4">Blog articles</h1>
+    
+    {{each titles}}
+    {{$value}}}
+    {{/each}}
+
     <a href="/article/modifyArticle" class="btn btn-success">New article</a>
 
 </div>

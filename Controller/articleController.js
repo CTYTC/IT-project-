@@ -30,17 +30,7 @@ const createArticle = (req, res) =>{
 };
 
 
-const retrieveArticles = (req,res) => {
-    const sql = 'SELECT title FROM article';
-    var data = []
-    db.base(sql, data, (result)=>{
-        if (result.length ==1){
-            res.send("Retrieve Articles Successful")
-        }else{
-            res.render('articlePage', {titles: result})
-        }
-    })
-}
+
 
 const getModifyPage = (req, res) =>{
     res.render('modifyArticle')
@@ -49,6 +39,5 @@ const getModifyPage = (req, res) =>{
 module.exports = {
     getArticlePage,
     createArticle,
-    retrieveArticles,
     getModifyPage
 };
