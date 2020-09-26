@@ -8,7 +8,7 @@ require("./model");
 const mainPageRouter = require("./router/mainPageRouter");
 const loginRouter = require("./router/loginRouter");
 const articleRouter = require("./router/articleRouter");
-
+const galleryRouter = require("./router/galleryRouter");
 //start static resource service
 const app = express();
 app.use('/www',express.static('public'));
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use('/', mainPageRouter);
 app.use('/article',articleRouter);
 app.use('/login',loginRouter);
-
+app.use('/gallery',loginRouter);
 
 //listen to the serve
 app.listen(3000, function () {
