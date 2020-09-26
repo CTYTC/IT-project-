@@ -5,6 +5,9 @@
     <title>LoginPage</title>
 </head>
 <body>
+<div>Test</div>
+<div>Another Test</div>
+<div>One more Test</div>
 <div>Login</div>
 <form action="/login" method="post">
     Username：<input type="text" name="username">
