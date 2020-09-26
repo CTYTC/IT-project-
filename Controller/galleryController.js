@@ -10,13 +10,9 @@ const uploadImage = function(req, res) {
         .then(function (img) {
             let url = img.url;
             let id = img.public_id;
-            let sql = "INSERT INTO gallery SET ?";
-            let data = [
-                id,
-                req.body.title,
-                url
-            ];
-            db.base(sql, data, (r) => {
+            let sql = 'insert into gallery set ?';
+            let data = {id :id, title: req.body.title, url: url};
+            db.base(sql, [data], (r) => {
                 if (r.affectedRows === 1) {
                     res.send("Successful")
                 } else {
@@ -27,6 +23,10 @@ const uploadImage = function(req, res) {
         .catch(function(err){
             console.log(err);
         })
+};
+
+const deleteImage = function(req, res) {
+
 }
 
 module.exports = {
