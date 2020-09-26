@@ -33,7 +33,7 @@ app.use(express.json());
 app.use('/', mainPageRouter);
 app.use('/article',articleRouter);
 app.use('/login',loginRouter);
-app.use('/gallery',loginRouter);
+app.use('/gallery',galleryRouter);
 app.use('/timeline',timelineRouter);
 
 

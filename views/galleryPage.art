@@ -7,8 +7,8 @@
 <body>
 <div>Gallery</div>
 <form action="/gallery" method="post" enctype="multipart/form-data">
-    Username：<input type="file" name="image">
-    Password：<input type="text" name="title">
+    File：<input type="file" name="image">
+    Description：<input type="text" name="title">
     <input type="submit" value="submit">
 </form>
 </body>
