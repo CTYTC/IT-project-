@@ -2,7 +2,11 @@ const db = require('../model/index');
 var cloudinary = require('cloudinary').v2;
 
 const getGalleryPage = (req,res) => {
-    res.render('galleryPage',{})
+    //res.render("galleryPage");
+    let sql = 'select * from gallery';
+    db.base(sql,null,(result) =>{
+        res.send(result);
+    })
 };
 
 const uploadImage = function(req, res) {
