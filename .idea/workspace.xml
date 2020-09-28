@@ -32,6 +32,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/articleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/articleController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/articleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/articleRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/articlePage.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/articlePage.art" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modifyArticle.art" beforeDir="false" afterPath="$PROJECT_DIR$/views/modifyArticle.art" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -400,9 +401,6 @@
       <workItem from="1600501753075" duration="1409000" />
       <workItem from="1600951702019" duration="3470000" />
       <workItem from="1601003934483" duration="118000" />
-      <workItem from="1601192070249" duration="346000" />
-      <workItem from="1601192684533" duration="1289000" />
-      <workItem from="1601281836399" duration="2320000" />
     </task>
     <servers />
   </component>
@@ -422,10 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="356" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601281864174">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="356" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1601281864174" />
     <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1600962374053">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

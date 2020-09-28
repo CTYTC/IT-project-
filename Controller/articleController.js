@@ -24,38 +24,10 @@ const createArticle = (req, res) =>{
         if (result){
             res.send("Create Article Successful")
         }else{
-            res.send("FAIL TO CREATE")
+            res.send('?')
         }
     })
 };
-
-const deleteArticle = (req, res) =>{
-    const sql ='DELETE FROM article where title = ?'
-    const data = req.body.title
-    db.base(sql, data, (result)=>{
-        if(result == 1){
-            res.send("Delete successful")
-        }else {
-            res.send("FAIL TO DELETE")
-        }
-    })
-}
-
-const updateArticle = (req,res) =>{
-    const sql = 'UPDATE article set description = ?, content = ? where title = ?'
-    const data = [
-        req.body.title,
-        req.body.description,
-        req.body.content
-    ]
-    db.base(sql, data, (result)=>{
-        if(result == 1){
-            result.send("Update Successful")
-        }else {
-            res.send("FAIL TO MODIFY")
-        }
-    })
-}
 
 
 
@@ -67,7 +39,5 @@ const getModifyPage = (req, res) =>{
 module.exports = {
     getArticlePage,
     createArticle,
-    getModifyPage,
-    deleteArticle,
-    updateArticle
+    getModifyPage
 };
