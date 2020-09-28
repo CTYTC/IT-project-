@@ -2,16 +2,19 @@ const db = require('../model/index');
 const body = require("ejs");
 
 const getArticlePage = (req,res) => {
-    const sql = 'SELECT title FROM article';
+    const sql = 'SELECT * FROM article';
     const data = [];
     db.base(sql, data, (result)=>{
-        if (result.length ==1){
-            res.send("Retrieve Articles Successful")
-        }else{
-            res.render('articlePage', {titles: result})
-        }
+
+        res.send(result)
+        console.log("here")
+
     })
 };
+
+const createArticlePage = (req, res)=>{
+    res.render('createArticle', {})
+}
 
 const createArticle = (req, res) =>{
     const sql = 'INSERT INTO article (title, description, content) VALUE (?, ?, ?)'
@@ -21,10 +24,9 @@ const createArticle = (req, res) =>{
         req.body.content
     ]
     db.base(sql, data, (result)=>{
-        if (result){
+        if (result.length == 1){
             res.send("Create Article Successful")
-        }else{
-            res.send("FAIL TO CREATE")
+            res.redirect('article')
         }
     })
 };
@@ -69,5 +71,6 @@ module.exports = {
     createArticle,
     getModifyPage,
     deleteArticle,
-    updateArticle
+    updateArticle,
+    createArticlePage
 };
