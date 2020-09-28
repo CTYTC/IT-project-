@@ -10,7 +10,8 @@ const getGalleryPage = (req,res) => {
 };
 
 const uploadImage = function(req, res) {
-    cloudinary.uploader.upload(req.files.image.path)
+    console.log(req.body);
+    cloudinary.uploader.upload(req.files.myFile.path)
         .then(function (img) {
             let url = img.url;
             let id = img.public_id;
