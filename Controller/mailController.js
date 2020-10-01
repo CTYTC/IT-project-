@@ -15,23 +15,22 @@ let transporter = nodemailer.createTransport({
 });
 
 
-
-
-
 const sendMail = (req, res) =>{
     var urlString = req.url;
     var arg = url.parse(req.url).query;
     var params = querystring.parse(arg);
 
-    var emailaddress = params.emailaddress || 'none email address';
+    var emailaddress = params.email_address || 'none email address';
     var firstname = params.firstname || 'empty firstname';
     var imgurl = params.imgurl || 'empty image';
     var lastname = params.lastname || 'empty lastname';
+    var content = params.content || 'empty text';
 
     var sendHtml = `<div>
       <div>firstName : ${firstname}</div>
       <div>lastname : ${lastname}</div>
       <div>emailaddress : ${emailaddress}</div>
+      <div>content : ${content}</div>
       <div>file : <a href="${imgurl}">down upload file</a> </div>
     </div>`;
 
@@ -39,8 +38,6 @@ const sendMail = (req, res) =>{
         from: 'nbdycares.mailservice@gmail.com',
         to: 'royfmttm@gmail.com',
         subject: 'From mailbox: Test',
-        //text: 'Hello User!'
-        //text: 'test text'+ content,
         html: sendHtml
         
     };
