@@ -1,5 +1,6 @@
 const db = require('../model/index');
-const body = require("ejs");
+const sd = require("silly-datetime")
+
 
 const getArticlePage = (req,res) => {
     const sql = 'SELECT * FROM article';
@@ -7,35 +8,40 @@ const getArticlePage = (req,res) => {
     db.base(sql, data, (result)=>{
 
         res.send(result)
-        console.log("here")
-
     })
 };
+
+const viewArticle = (req,res) =>{
+    const sql = 'SELECT ? FROM article'
+    const data = []
+}
 
 const createArticlePage = (req, res)=>{
     res.render('createArticle', {})
 }
 
 const createArticle = (req, res) =>{
-    const sql = 'INSERT INTO article (title, description, content) VALUE (?, ?, ?)'
+    const sql = 'INSERT INTO article (title, createDate, description, content) VALUE (?, ?, ?, ?)'
+    const time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
     const data = [
         req.body.title,
+        time,
         req.body.description,
         req.body.content
     ]
     db.base(sql, data, (result)=>{
-        if (result.length == 1){
+        if (result.affectedRows == 1){
             res.send("Create Article Successful")
-            res.redirect('article')
         }
     })
 };
 
 const deleteArticle = (req, res) =>{
     const sql ='DELETE FROM article where title = ?'
-    const data = req.body.title
+    const data = [req.body.title]
+    console.log(data)
     db.base(sql, data, (result)=>{
-        if(result == 1){
+        if(result.affectedRows == 1){
             res.send("Delete successful")
         }else {
             res.send("FAIL TO DELETE")
@@ -44,9 +50,10 @@ const deleteArticle = (req, res) =>{
 }
 
 const updateArticle = (req,res) =>{
-    const sql = 'UPDATE article set description = ?, content = ? where title = ?'
+    const sql = 'UPDATE article set createDate = ?, description = ?, content = ? where title = ?'
+    const time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
     const data = [
-        req.body.title,
+        time,
         req.body.description,
         req.body.content
     ]
