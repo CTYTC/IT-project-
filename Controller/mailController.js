@@ -16,28 +16,22 @@ let transporter = nodemailer.createTransport({
 
 
 const sendMail = (req, res) =>{
-    var urlString = req.url;
-    var arg = url.parse(req.url).query;
-    var params = querystring.parse(arg);
-
-    var emailaddress = params.email_address || 'none email address';
-    var firstname = params.firstname || 'empty firstname';
-    var imgurl = params.imgurl || 'empty image';
-    var lastname = params.lastname || 'empty lastname';
-    var content = params.content || 'empty text';
+    var text = `Name is ${req.body.name }, and email address is${req.body.email}.`;
+    var name = req.body.name;
+    var email = req.body.email;
+    var message = req.body.message;
 
     var sendHtml = `<div>
-      <div>firstName : ${firstname}</div>
-      <div>lastname : ${lastname}</div>
-      <div>emailaddress : ${emailaddress}</div>
-      <div>content : ${content}</div>
-      <div>file : <a href="${imgurl}">down upload file</a> </div>
+      <div>Name : ${name}</div>
+      <div>email address : ${email}</div>
+      <div>Message : ${message}</div>
+
     </div>`;
 
     let mailOptions = {
         from: 'nbdycares.mailservice@gmail.com',
         to: 'royfmttm@gmail.com',
-        subject: 'From mailbox: Test',
+        subject: text,
         html: sendHtml
         
     };
@@ -46,8 +40,12 @@ const sendMail = (req, res) =>{
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error.message);
+        }else{
+            
+            res.send("send Successful");
+            console.log('sending mail success');
         }
-        console.log('sending mail success');
+        
     });
     
 }
