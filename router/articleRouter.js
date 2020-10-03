@@ -9,4 +9,5 @@ articleRouter.get('/modifyArticle', (req, res) => articleController.getModifyPag
 articleRouter.post('/deleteArticle', (req,res) =>articleController.deleteArticle(req,res));
 articleRouter.post('/updateArticle', (req,res)=>articleController.updateArticle(req,res));
 articleRouter.get('/createArticle', (req,res) => articleController.createArticlePage(req,res))
+articleRouter.get('/viewArticle', (req, res) => articleController.viewArticle(req, res))
 module.exports = articleRouter;

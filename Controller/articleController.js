@@ -6,14 +6,21 @@ const getArticlePage = (req,res) => {
     const sql = 'SELECT * FROM article';
     const data = [];
     db.base(sql, data, (result)=>{
-
         res.send(result)
     })
 };
 
 const viewArticle = (req,res) =>{
     const sql = 'SELECT ? FROM article'
-    const data = []
+    console.log(req.body)
+    const data = [req.body.title]
+    db.base(sql, data, (result)=>{
+        if(result.affectedRows == 1){
+            res.send(result)
+        }else {
+            res.send("FAIL TO VIEW")
+        }
+    })
 }
 
 const createArticlePage = (req, res)=>{
@@ -39,7 +46,6 @@ const createArticle = (req, res) =>{
 const deleteArticle = (req, res) =>{
     const sql ='DELETE FROM article where title = ?'
     const data = [req.body.title]
-    console.log(data)
     db.base(sql, data, (result)=>{
         if(result.affectedRows == 1){
             res.send("Delete successful")
@@ -79,5 +85,6 @@ module.exports = {
     getModifyPage,
     deleteArticle,
     updateArticle,
-    createArticlePage
+    createArticlePage,
+    viewArticle
 };
