@@ -11,15 +11,11 @@ const getArticlePage = (req,res) => {
 };
 
 const viewArticle = (req,res) =>{
-    const sql = 'SELECT ? FROM article'
     console.log(req.body)
-    const data = [req.body.title]
-    db.base(sql, data, (result)=>{
-        if(result.affectedRows == 1){
-            res.send(result)
-        }else {
-            res.send("FAIL TO VIEW")
-        }
+    const sql = 'SELECT * FROM article WHERE title = ?'
+    const data = [req.body]
+    db.base(sql, data, (result)=> {
+        res.send(result)
     })
 }
 
@@ -61,7 +57,8 @@ const updateArticle = (req,res) =>{
     const data = [
         time,
         req.body.description,
-        req.body.content
+        req.body.content,
+        req.body.title
     ]
     db.base(sql, data, (result)=>{
         if(result == 1){
