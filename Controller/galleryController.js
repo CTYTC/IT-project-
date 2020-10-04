@@ -31,11 +31,21 @@ const uploadImage = function(req, res) {
 };
 
 const deleteImage = function(req, res) {
-
+    let sql = 'delete from gallery where id = ?';
+    let data = [req.body.id];
+    console.log(req.body);
+    db.base(sql,data,(result) =>{
+        if (result.affectedRows === 1) {
+            res.send("Successful");
+        } else {
+            console.log(result);
+        }
+    })
 }
 
 module.exports = {
     uploadImage,
     getGalleryPage,
+    deleteImage,
 };
 

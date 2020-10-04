@@ -14,4 +14,5 @@ const multipartMiddleware = multipart();
 
 galleryRouter.post('/',multipartMiddleware, (req,res) => galleryController.uploadImage(req, res));
 galleryRouter.get('/',galleryController.getGalleryPage);
+galleryRouter.post('/delete',galleryController.deleteImage);
 module.exports = galleryRouter;

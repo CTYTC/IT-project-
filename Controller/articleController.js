@@ -1,41 +1,49 @@
 const db = require('../model/index');
-const body = require("ejs");
+const sd = require("silly-datetime")
+
 
 const getArticlePage = (req,res) => {
     const sql = 'SELECT * FROM article';
     const data = [];
     db.base(sql, data, (result)=>{
-
         res.send(result)
-        console.log("here")
-
     })
 };
+
+const viewArticle = (req,res) =>{
+    console.log(req.body)
+    const sql = 'SELECT * FROM article WHERE title = ?'
+    const data = [req.body]
+    db.base(sql, data, (result)=> {
+        res.send(result)
+    })
+}
 
 const createArticlePage = (req, res)=>{
     res.render('createArticle', {})
 }
 
 const createArticle = (req, res) =>{
-    const sql = 'INSERT INTO article (title, description, content) VALUE (?, ?, ?)'
+    const sql = 'INSERT INTO article (title, createDate, description, content) VALUE (?, ?, ?, ?)'
+    const time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
     const data = [
         req.body.title,
+        time,
         req.body.description,
         req.body.content
     ]
     db.base(sql, data, (result)=>{
-        if (result.length == 1){
+        if (result.affectedRows == 1){
             res.send("Create Article Successful")
-            res.redirect('article')
         }
     })
 };
 
 const deleteArticle = (req, res) =>{
     const sql ='DELETE FROM article where title = ?'
-    const data = req.body.title
+    const data = [req.body.title]
     db.base(sql, data, (result)=>{
-        if(result == 1){
+        if(result.affectedRows == 1){
             res.send("Delete successful")
         }else {
             res.send("FAIL TO DELETE")
@@ -44,11 +52,13 @@ const deleteArticle = (req, res) =>{
 }
 
 const updateArticle = (req,res) =>{
-    const sql = 'UPDATE article set description = ?, content = ? where title = ?'
+    const sql = 'UPDATE article set createDate = ?, description = ?, content = ? where title = ?'
+    const time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
     const data = [
-        req.body.title,
+        time,
         req.body.description,
-        req.body.content
+        req.body.content,
+        req.body.title
     ]
     db.base(sql, data, (result)=>{
         if(result == 1){
@@ -72,5 +82,6 @@ module.exports = {
     getModifyPage,
     deleteArticle,
     updateArticle,
-    createArticlePage
+    createArticlePage,
+    viewArticle
 };
