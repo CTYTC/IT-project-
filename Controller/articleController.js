@@ -3,7 +3,7 @@ const sd = require("silly-datetime")
 
 
 const getArticlePage = (req,res) => {
-    const sql = 'SELECT * FROM article';
+    const sql = 'SELECT * FROM article ORDER BY createDate DESC';
     const data = [];
     db.base(sql, data, (result)=>{
         res.send(result)
