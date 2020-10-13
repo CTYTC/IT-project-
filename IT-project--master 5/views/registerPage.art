@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div>Register</div>
+<form action="/login/register" method="post">
+    Username：<input type="text" name="username">
+    Password：<input type="text" name="password">
+    Email Address：<input type="text" name="email_address">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
