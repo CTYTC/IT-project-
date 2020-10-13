@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+</head>
+<body>
+<div>Test</div>
+<div>Another Test</div>
+<div>One more Test</div>
+<div>Login</div>
+<form action="/login" method="post">
+    Username：<input type="text" name="username">
+    Password：<input type="text" name="password">
+    <input type="submit" value="submit">
+    <div><a href="/login/register">Register</a></div>
+</form>
+</body>
+</html>
