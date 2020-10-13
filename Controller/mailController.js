@@ -36,13 +36,24 @@ const sendMail = (req, res) =>{
         
     };
 
+    var result = {state:0};
 
     transporter.sendMail(mailOptions, (error, info) => {
+        
+
         if (error) {
+            res.writeHead(200, {
+                'Content-Type': 'application/json'
+            });
+            res.end(JSON.stringify(result));
             return console.log(error.message);
-        }else{
+        }else{      
+            res.writeHead(200, {
+                'Content-Type': 'application/json'
+            });
+            result.state = 1;
+            res.end(JSON.stringify(result));
             
-            res.send("send Successful");
             console.log('sending mail success');
         }
         
