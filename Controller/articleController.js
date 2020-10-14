@@ -33,7 +33,7 @@ const createArticle = (req, res) =>{
             let time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
             let sql = 'insert into article set ?';
             let data = {title: req.body.title, createDate: time,
-                description: req.body.description,content:req.body.content, id :id, url: url};
+                description: req.body.description, content:req.body.content, image_id :id, image_url: url};
             db.base(sql, [data], (r) => {
                 if (r.affectedRows === 1) {
                     res.send("Successful")
