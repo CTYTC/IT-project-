@@ -1,5 +1,6 @@
 const db = require('../model/index');
 const sd = require("silly-datetime")
+var cloudinary = require('cloudinary').v2;
 
 
 const getArticlePage = (req,res) => {
@@ -24,19 +25,25 @@ const createArticlePage = (req, res)=>{
 }
 
 const createArticle = (req, res) =>{
-    const sql = 'INSERT INTO article (title, createDate, description, content) VALUE (?, ?, ?, ?)'
-    const time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
-    const data = [
-        req.body.title,
-        time,
-        req.body.description,
-        req.body.content
-    ]
-    db.base(sql, data, (result)=>{
-        if (result.affectedRows == 1){
-            res.send("Create Article Successful")
-        }
-    })
+    console.log(req.body);
+    cloudinary.uploader.upload(req.files.myFile.path)
+        .then(function (img) {
+            let url = img.url;
+            let id = img.public_id;
+            let time = sd.format(new Date(), 'YYYY-MM-DD HH:mm');
+            let sql = 'insert into article set ?';
+            let data = {title: req.body.title, createDate: time,
+                description: req.body.description,content:req.body.content, id :id, url: url};
+            db.base(sql, [data], (r) => {
+                if (r.affectedRows === 1) {
+                    res.send("Successful")
+                } else {
+                    console.log(r)
+                }
+            }).catch(function(err){
+                    console.log(err);
+                })
+        })
 };
 
 const deleteArticle = (req, res) =>{
