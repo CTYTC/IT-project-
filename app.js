@@ -40,7 +40,7 @@ app.use('/mail', mailRouter);
 
 
 //listen to the serve
- app.listen(config.port,function(){
+ app.listen(process.env.PORT || config.port,function(){
     console.log(`Server started on port ${config.port}`)
 });
 
