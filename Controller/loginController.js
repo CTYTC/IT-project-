@@ -1,3 +1,4 @@
+
 const db = require('../model/index');
 
 const getLoginPage = (req,res) => {
@@ -5,18 +6,25 @@ const getLoginPage = (req,res) => {
 };
 
 const loginToSystem = (req,res) =>{
-    let info = req.body;
-    let sql = 'select * from user where username=? and password=?';
+    let username = req.body.username;
+    let password = req.body.password;
+   // let sql = 'select * from user where username=? and password=?';
+   console.log(username);
+   console.log(password);
     let data = [
-        info.username,
-        info.password
+        username,
+        password
     ]
-    db.base(sql,data, (result)=>{
-        if (result.length ==1){
-            res.send("login Successful")
-        }else{
-            console.log(result)
+    var sql = 'SELECT password FROM user WHERE username = "' + username + '"';
+
+    var rslt = {state:0};
+
+    db.base(sql,null,(result) =>{
+        console.log(result[0].password);
+        if(password == result[0].password){
+            rslt.state = 1;
         }
+        res.send(rslt);
     })
 
 }
