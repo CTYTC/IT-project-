@@ -13,6 +13,7 @@ const loginRouter = require("./router/loginRouter");
 const articleRouter = require("./router/articleRouter");
 const galleryRouter = require("./router/galleryRouter");
 const timelineRouter = require("./router/timelineRouter");
+const mailRouter = require("./router/mailRouter");
 
 
 //start static resource service
@@ -35,6 +36,7 @@ app.use('/article',articleRouter);
 app.use('/login',loginRouter);
 app.use('/gallery',galleryRouter);
 app.use('/timeline',timelineRouter);
+app.use('/mail', mailRouter);
 
 
 
