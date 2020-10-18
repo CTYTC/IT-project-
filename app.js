@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const template = require('art-template');
 const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
