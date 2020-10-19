@@ -18,7 +18,7 @@ const viewArticle = (req,res) =>{
     db.base(sql, data, (result)=> {
         res.send(result)
     })
-}
+};
 
 const createArticlePage = (req, res)=>{
     res.render('createArticle', {})
@@ -76,11 +76,31 @@ const updateArticle = (req,res) =>{
     })
 }
 
-
+const getSubtitle = (req,res) => {
+    let sql = 'select * from module where Title = ? limit 1';
+    db.base(sql,["article"],(result) =>{
+        res.send(result[0].sub_title);
+    })
+};
 
 
 const getModifyPage = (req, res) =>{
     res.render('modifyArticle')
+}
+
+
+const updateModuleTitle = function(req, res) {
+    let sql = 'update module set sub_title = ? where Title = ?';
+    let data = [req.body.subtitle, "article"];
+    console.log(req.body);
+    db.base(sql,data,(result) =>{
+        if (result.affectedRows === 1) {
+            console.log("yes")
+            res.send("Successful");
+        } else {
+            console.log(result);
+        }
+    })
 }
 
 module.exports = {
@@ -90,5 +110,7 @@ module.exports = {
     deleteArticle,
     updateArticle,
     createArticlePage,
-    viewArticle
+    viewArticle,
+    getSubtitle,
+    updateModuleTitle,
 };
