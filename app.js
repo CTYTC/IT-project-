@@ -40,8 +40,9 @@ app.use('/mail', mailRouter);
 
 
 //listen to the serve
- app.listen(config.port,function(){
-    console.log(`Server started on port ${config.port}`)
+ app.listen(config.port || process.env.PORT, function(){
+    console.log("The library app is running!");
+    console.log(`Server started on port ${config.port}`);
 });
 
 // app.listen(process.env.PORT || 3000, function () {
