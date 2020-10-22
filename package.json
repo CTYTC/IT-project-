@@ -1,11 +1,11 @@
 {
-  "name": "nobodyCares-node",
+  "name": "nobodycares-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "roy test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -35,5 +35,13 @@
     "pug": "^3.0.0",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTYTC/IT-project-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CTYTC/IT-project-/issues"
+  },
+  "homepage": "https://github.com/CTYTC/IT-project-#readme"
 }
