@@ -19,7 +19,7 @@ const addTimeline = (req,res) =>{
     }
     let sql = 'insert into timeline set ?';
     db.base(sql,timeline,(result) =>{
-        if(result.affectedRows == 1){
+        if(result.affectedRows === 1){
             res.redirect('/timeline')
         }
     })
@@ -42,7 +42,7 @@ const deleteTimeline = (req, res) =>{
     const sql ='DELETE FROM timeline where ID = ?';
     const data = req.body.id;
     db.base(sql, [data], (result)=>{
-        if(result.affectedRows == 1){
+        if(result.rowsAffected == 1){
             res.send("Delete successful")
             console.log("Deleted!!!!")
         }
@@ -71,6 +71,38 @@ const getAllInfo = (req,res) =>{
     })
 }
 
+const getSubtitle = (req,res) => {
+    let sql = 'select * from module where Title = ? limit 1';
+    db.base(sql,["timeline"],(result) =>{
+        res.send(result[0].sub_title);
+    })
+};
+
+const updateModuleTitle = function(req, res) {
+    let sql = 'update module set sub_title = ? where Title = ?';
+    let data = [req.body.subtitle, "timeline"];
+    console.log(req.body);
+    db.base(sql,data,(result) =>{
+        if (result.affectedRows === 1) {
+            console.log("yes")
+            res.send("Successful");
+        } else {
+            console.log(result);
+        }
+    })
+}
+
+const searchDes = function(req,res) {
+    let sql = 'select * from timeline where month=? and year=?'
+    let data = [req.body.month,
+                req.body.year]
+    db.base(sql,data,(result)=>{
+        if(result.rowsAffected == 1){
+            res.send(result[0])
+        }
+    })
+}
+
 
 module.exports = {
     getPage,
@@ -78,5 +110,8 @@ module.exports = {
     pageInfo,
     deleteTimeline,
     updateTimeline,
-    getAllInfo
+    getAllInfo,
+    updateModuleTitle,
+    getSubtitle,
+    searchDes
 };
