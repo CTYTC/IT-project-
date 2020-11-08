@@ -29,8 +29,10 @@ const uploadImage = function(req, res) {
 };
 
 const updateIntroduction = function(req, res) {
+    console.log("body: ", req.body)
     let sql = 'update homepage set introduction = ? where index = 1';
     let data = [req.body.introduction];
+    console.log("data: ", data)
     db.base(sql,data,(result) =>{
         if (result.affectedRows === 1) {
             res.send("Successful");

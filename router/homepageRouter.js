@@ -1,6 +1,7 @@
 const express = require('express');
 const homepageRouter = express.Router();
 const mainPageController = require('../Controller/mainPageController');
+const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
     cloud_name: 'zjz',
@@ -14,4 +15,4 @@ homepageRouter.post('/updateIntroduction', (req, res) => mainPageController.upda
 homepageRouter.post('/uploadImage', multipartMiddleware, (req, res) => mainPageController.uploadImage(req,res));
 homepageRouter.post('/updateBg', multipartMiddleware, (req, res) => mainPageController.uploadBg(req,res));
 
-module.exports = mainPageRouter;
+module.exports = homepageRouter;
