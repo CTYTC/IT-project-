@@ -14,6 +14,7 @@ const galleryRouter = require("./router/galleryRouter");
 const timelineRouter = require("./router/timelineRouter");
 const mailRouter = require("./router/mailRouter");
 const homepageRouter = require("./router/homepageRouter");
+const backstageRouter = require("./router/backstageRouter");
 
 
 //start static resource service
@@ -38,6 +39,7 @@ app.use('/login',loginRouter);
 app.use('/gallery',galleryRouter);
 app.use('/timeline',timelineRouter);
 app.use('/mail', mailRouter);
+app.use('/backstage', backstageRouter);
 
 
 

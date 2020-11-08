@@ -1,4 +1,4 @@
-
+var jwt = require('jsonwebtoken');
 const db = require('../model/index');
 
 const getLoginPage = (req,res) => {
@@ -8,13 +8,12 @@ const getLoginPage = (req,res) => {
 const loginToSystem = (req,res) =>{
     let username = req.body.username;
     let password = req.body.password;
-   // let sql = 'select * from user where username=? and password=?';
-   console.log(username);
-   console.log(password);
-    let data = [
-        username,
-        password
-    ]
+    // console.log(username);
+    // console.log(password);
+    // let data = [
+    //     username,
+    //     password
+    // ]
     var sql = 'SELECT password FROM user WHERE username = "' + username + '"';
 
     var rslt = {state:0};
@@ -23,6 +22,8 @@ const loginToSystem = (req,res) =>{
         console.log(result[0].password);
         if(password == result[0].password){
             rslt.state = 1;
+            rslt.token = jwt.sign({ username }, "nobody", { expiresIn: 60 * 60 * 1 });
+            rslt.message = "login success";
         }
         res.send(rslt);
     })
