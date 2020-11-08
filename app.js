@@ -31,6 +31,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', mainPageRouter);
+app.use('/homepage', mainPageRouter);
 app.use('/article',articleRouter);
 app.use('/login',loginRouter);
 app.use('/gallery',galleryRouter);
