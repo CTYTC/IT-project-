@@ -40,8 +40,9 @@ const pageInfo = (req,res) => {
 
 const deleteTimeline = (req, res) =>{
     const sql ='DELETE FROM timeline where ID = ?';
-    const data = req.body.id;
-    db.base(sql, [data], (result)=>{
+    const data = req.body.ID;
+    console.log(data);
+    db.base(sql, data, (result)=>{
         if(result.rowsAffected == 1){
             res.send("Delete successful")
             console.log("Deleted!!!!")
