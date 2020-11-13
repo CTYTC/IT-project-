@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "\\.idea",
+    "\\Controller",
+    "\\model",
+    "\\router",
+    "\\views"
+  ],
+  "PreviewInSolutionExplorer": false
+}
