@@ -13,7 +13,6 @@ const articleRouter = require("./router/articleRouter");
 const galleryRouter = require("./router/galleryRouter");
 const timelineRouter = require("./router/timelineRouter");
 const mailRouter = require("./router/mailRouter");
-const homepageRouter = require("./router/homepageRouter");
 const backstageRouter = require("./router/backstageRouter");
 
 
@@ -33,7 +32,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', mainPageRouter);
-app.use('/homepage', homepageRouter);
 app.use('/article',articleRouter);
 app.use('/login',loginRouter);
 app.use('/gallery',galleryRouter);
