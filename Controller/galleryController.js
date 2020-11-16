@@ -49,6 +49,41 @@ const deleteImage = function(req, res) {
     })
 }
 
+
+const updateHomepage = function(req, res) {
+    cloudinary.uploader.upload(req.files.myFile.path)
+        .then(function (img) {
+            let url = img.url;
+            let id = img.public_id;
+            let sql = 'update homepage set image_url = ?, image_id = ? where index = 1';
+            let data = [url, id];
+            db.base(sql, data, (r) => {
+                if (r.affectedRows === 1) {
+                    res.send("Successful")
+                } else {
+                    console.log(r)
+                }
+            })
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+};
+
+const updateIntroduction = function(req, res) {
+    console.log("body: ", req.body)
+    let sql = 'update homepage set introduction = ? where index = 1';
+    let data = [req.body.introduction];
+    console.log("data: ", data)
+    db.base(sql,data,(result) =>{
+        if (result.affectedRows === 1) {
+            res.send("Successful");
+        } else {
+            console.log(result);
+        }
+    })
+}
+
 const updateModuleTitle = function(req, res) {
     let sql = 'update module set sub_title = ? where Title = ?';
     let data = [req.body.sub_title, "gallery"];
@@ -66,6 +101,8 @@ module.exports = {
     getGalleryPage,
     deleteImage,
     getSubtitle,
-    updateModuleTitle
+    updateModuleTitle,
+    updateHomepage,
+    updateIntroduction
 };
 

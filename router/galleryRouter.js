@@ -16,5 +16,6 @@ galleryRouter.post('/',multipartMiddleware, (req,res) => galleryController.uploa
 galleryRouter.get('/',galleryController.getGalleryPage);
 galleryRouter.get('/subtitle',galleryController.getSubtitle);
 galleryRouter.post('/delete',galleryController.deleteImage);
+galleryRouter.post('/homepage', multipartMiddleware, (req,res) => galleryController.updateHomepage(req, res));
 galleryRouter.post('/updateSubTitle',(req,res) => galleryController.updateModuleTitle(req, res));
 module.exports = galleryRouter;

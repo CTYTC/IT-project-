@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
 const config = require('./src/config/config')
@@ -21,10 +20,6 @@ const app = express();
 app.use('/www',express.static('public'));
 app.use(morgan('combined'));
 app.use(cors());
-
-app.set('views',path.join(__dirname, 'views'));
-app.set('view engine','art');
-app.engine('art', require('express-art-template'));
 
 
 app.use(bodyParser.urlencoded({extended:false}));
