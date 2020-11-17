@@ -11,7 +11,8 @@ const getPage = (req, res) => {
 
 const updateHomepage = function(req, res) {
     console.log(req.files)
-    config.cloudinaryConfig.uploader.upload(req.files.myFile.path)
+    config.cloudinaryConfig.uploader.upload(req.files.myFile.path, { eager: [
+            { width: 165, height: 130, crop: "pad" }]})
         .then(function (img) {
             let url = img.url;
             let id = img.public_id;
