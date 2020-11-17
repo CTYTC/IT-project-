@@ -58,7 +58,7 @@ const deleteImage = function(req, res) {
 
 const updateModuleTitle = function(req, res) {
     let sql = 'update module set sub_title = ? where Title = ?';
-    let data = [req.body.sub_title, "gallery"];
+    let data = [req.body.subtitle, "gallery"];
     console.log(req.body);
     db.base(sql,data,(result) =>{
         if (result.affectedRows === 1) {
