@@ -21,5 +21,12 @@ module.exports = {
         from: 'nbdycares.mailservice@gmail.com',
         to: 'royfmttm@gmail.com',
     },
-    cloudinaryConfig: cloudinary
+    cloudinaryConfig: cloudinary,
+    database: {
+        host:'118.24.149.120',
+        port:'3306',
+        user:'developer',
+        password:'GPmCewWfqCMIQtTV',
+        database:'db_20200710'
+    }
 }

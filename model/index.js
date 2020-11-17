@@ -1,12 +1,13 @@
 const mysql = require('mysql');
+const config = require('../src/config/config')
 
 exports.base = (sql,data,callback) =>{
     const connection = mysql.createConnection({
-        host:'118.24.149.120',
-        port:'3306',
-        user:'developer',
-        password:'GPmCewWfqCMIQtTV',
-        database:'db_20200710'
+        host: config.database.host,
+        port: config.database.port,
+        user: config.database.user,
+        password: config.database.password,
+        database: config.database.database
     });
 
     connection.connect();

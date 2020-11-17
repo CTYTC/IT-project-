@@ -1,6 +1,6 @@
 const db = require('../model/index');
 const sd = require("silly-datetime")
-var cloudinary = require('cloudinary').v2;
+const config = require('../src/config/config')
 
 
 const getArticlePage = (req,res) => {
@@ -26,7 +26,7 @@ const createArticlePage = (req, res)=>{
 
 const createArticle = (req, res) =>{
     console.log(req.body);
-    cloudinary.uploader.upload(req.files.myFile.path)
+    config.cloudinaryConfig.uploader.upload(req.files.myFile.path)
         .then(function (img) {
             let url = img.url;
             let id = img.public_id;
