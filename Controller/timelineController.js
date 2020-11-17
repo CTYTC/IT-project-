@@ -73,7 +73,7 @@ const getAllInfo = (req,res) =>{
 
 const getSubtitle = (req,res) => {
     let sql = 'select * from module where Title = ? limit 1';
-    db.base(sql,["timeline"],(result) =>{
+    db.base(sql,"timeline",(result) =>{
         res.send(result[0].sub_title);
     })
 };
