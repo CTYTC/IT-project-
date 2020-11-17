@@ -1,10 +1,8 @@
 const db = require('../model/index');
-const moment = require('moment');
 
 const getPage = (req,res) =>{
     let sql = 'select year from timeline GROUP BY timeline.year';
     db.base(sql,null,(result) =>{
-        // res.render('timelinePage',{list:result});
         res.send(result);
     })
 };
