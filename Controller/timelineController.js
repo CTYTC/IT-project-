@@ -56,8 +56,9 @@ const updateTimeline = (req,res) =>{
         req.body.year,
         req.body.month,
         req.body.description,
-        req.body.id
+        req.body.ID
     ]
+    console.log(data)
     db.base(sql, data, (result)=>{
         if(result == 1){
             result.send("Update Successful")
