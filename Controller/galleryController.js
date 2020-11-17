@@ -55,8 +55,8 @@ const updateHomepage = function(req, res) {
         .then(function (img) {
             let url = img.url;
             let id = img.public_id;
-            let sql = 'update homepage set image_url = ?, image_id = ? where index = 1';
-            let data = [url, id];
+            let sql = 'UPDATE homepage SET image_url = ?, image_id = ? where id = ?';
+            let data = [url, id, "homepage"];
             db.base(sql, data, (r) => {
                 if (r.affectedRows === 1) {
                     res.send("Successful")

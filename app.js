@@ -15,8 +15,10 @@ const mailRouter = require("./router/mailRouter");
 const backstageRouter = require("./router/backstageRouter");
 
 
+
 //start static resource service
 const app = express();
+
 app.use('/www',express.static('public'));
 app.use(morgan('combined'));
 app.use(cors());
@@ -40,9 +42,5 @@ app.use('/backstage', backstageRouter);
  app.listen(process.env.PORT || config.port,function(){
     console.log(`Server started on port ${config.port}`)
 });
-
-// app.listen(process.env.PORT || 3000, function () {
-//     console.log('app is running at port 3000')
-// });
 
 module.exports = app;
