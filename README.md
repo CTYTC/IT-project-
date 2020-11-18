@@ -21,12 +21,23 @@ A powerful media management -- Cloudinary is used to store images. With Cloudina
 We display images and articles ine the way of waterfall wall, which makes it look nice and beautiful. 
 
 ## Description of key classes and the application's layers 
+<img width="592" alt="layers" src="https://user-images.githubusercontent.com/42131250/99541426-c55a1280-29eb-11eb-8571-2db570d303c7.png">
 
 
 
 ## Description of database structure
 
+<img width="780" alt="database" src="https://user-images.githubusercontent.com/42131250/99541502-d99e0f80-29eb-11eb-990b-6b0803128c41.png">
+
 
 
 ## Deployment guidelines 
 
+#Locol Delpoyment
+
+- first run 'npm install' and 'node app' in the back end
+- Secondly run 'npm install' and 'npm run serve' in the front end
+
+#Heroku
+
+-Web app is deployed in Heroku with link: https://guarded-castle-98054.herokuapp.com/
