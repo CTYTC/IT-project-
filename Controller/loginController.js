@@ -8,12 +8,7 @@ const getLoginPage = (req,res) => {
 const loginToSystem = (req,res) =>{
     let username = req.body.username;
     let password = req.body.password;
-    // console.log(username);
-    // console.log(password);
-    // let data = [
-    //     username,
-    //     password
-    // ]
+
     var sql = 'SELECT password FROM user WHERE username = "' + username + '"';
 
     var rslt = {state:0};

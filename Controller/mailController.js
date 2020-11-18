@@ -1,16 +1,14 @@
+const config = require('../src/config/config')
 const nodemailer = require('nodemailer');
-var url = require("url");
-var querystring = require("querystring");
-const { param } = require('../router/mailRouter');
 
 let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    requireTLS: true,
+    host: config.mailConfig.host,
+    port: config.mailConfig.port,
+    secure: config.mailConfig.secure,
+    requireTLS: config.mailConfig.requireTLS,
     auth: {
-        user : 'nbdycares.mailservice@gmail.com',
-        pass : 'nbdycares123'
+        user : config.mailConfig.auth.user,
+        pass : config.mailConfig.auth.pass
     }
 });
 
@@ -29,11 +27,10 @@ const sendMail = (req, res) =>{
     </div>`;
 
     let mailOptions = {
-        from: 'nbdycares.mailservice@gmail.com',
-        to: 'royfmttm@gmail.com',
+        from: config.mailConfig.from,
+        to: config.mailConfig.to,
         subject: text,
         html: sendHtml
-        
     };
 
     var result = {state:0};

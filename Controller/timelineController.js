@@ -1,10 +1,8 @@
 const db = require('../model/index');
-const moment = require('moment');
 
 const getPage = (req,res) =>{
     let sql = 'select year from timeline GROUP BY timeline.year';
     db.base(sql,null,(result) =>{
-        // res.render('timelinePage',{list:result});
         res.send(result);
     })
 };
@@ -56,8 +54,9 @@ const updateTimeline = (req,res) =>{
         req.body.year,
         req.body.month,
         req.body.description,
-        req.body.id
+        req.body.ID
     ]
+    console.log(data)
     db.base(sql, data, (result)=>{
         if(result == 1){
             result.send("Update Successful")
@@ -74,7 +73,7 @@ const getAllInfo = (req,res) =>{
 
 const getSubtitle = (req,res) => {
     let sql = 'select * from module where Title = ? limit 1';
-    db.base(sql,["timeline"],(result) =>{
+    db.base(sql,"timeline",(result) =>{
         res.send(result[0].sub_title);
     })
 };
