@@ -16,7 +16,7 @@ let transporter = nodemailer.createTransport({
 
 
 const sendMail = (req, res) =>{
-    var text = `Name is ${req.body.name }, and email address is${req.body.email}.`;
+    var text = `Name is ${req.body.name }, and email address is ${req.body.email}.`;
     var name = req.body.name;
     var email = req.body.email;
     var message = req.body.message;
