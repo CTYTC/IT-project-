@@ -13,7 +13,8 @@
 - Authentication -- The front end uses two attributes to track the statue of user login, userLogin and Authentication.  UserLogin represents if user has logined in. Authentication stored in the local storage contains the information for backend to verify if user's login state is valid. When user firstly login, the backend will return a token which should be stored as Authentication. After user logining out, the userLogin will be false and Authentication will be empty.
 
 
-- Timeline
+- Page Control
+Timeline page shown three desciption on a specific year once a time. The user are able to click "last" and "next" to change the month when the month is over three. The user also able to select a specific year to see what happen in this year. All of these operation do not change the router of this page. It controlled by the back-end. Therefore, it will not need to give the new router at each time changing the year which will save a lot of time in redirecting.
 
 
 - Image storage and display
