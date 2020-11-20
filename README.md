@@ -9,14 +9,25 @@
 
 - User stories
 
+All of these files could be found in the docs directory 
+
+- Test case
+
+The test case could be found in the tests directory 
+
 ## Description of key algorithms
-- Authentication -- The front end uses two attributes to track the statue of user login, userLogin and Authentication.  UserLogin represents if user has logined in. Authentication stored in the local storage contains the information for backend to verify if user's login state is valid. When user firstly login, the backend will return a token which should be stored as Authentication. After user logining out, the userLogin will be false and Authentication will be empty.
+- Authentication 
+
+-- The front end uses two attributes to track the statue of user login, userLogin and Authentication.  UserLogin represents if user has logined in. Authentication stored in the local storage contains the information for backend to verify if user's login state is valid. When user firstly login, the backend will return a token which should be stored as Authentication. After user logining out, the userLogin will be false and Authentication will be empty.
 
 
-- Page Control --Timeline page shown three desciption on a specific year once a time. The user are able to click "last" and "next" to change the month when the month is over three. The user also able to select a specific year to see what happen in this year. All of these operation do not change the router of this page. It controlled by the back-end. Therefore, it will not need to give the new router at each time changing the year which will save a lot of time in redirecting.
+- Page Control 
+
+--Timeline page shown three desciption on a specific year once a time. The user are able to click "last" and "next" to change the month when the month is over three. The user also able to select a specific year to see what happen in this year. All of these operation do not change the router of this page. It controlled by the back-end. Therefore, it will not need to give the new router at each time changing the year which will save a lot of time in redirecting.
 
 
 - Image storage and display
+
 A powerful media management -- Cloudinary is used to store images. With Cloudinary, images could be uploaded to the storage safely and easily. Also, while uploading, transformation could also be handled to crop images. Every image that stored in Cloudinary would have a url and public id, which could be stored in our database. While using the images, we access the database to get the url and id, and then getting the images with them. In this way, although all images are stored in the same bucket, they could be seperated by database table. 
 We display images and articles ine the way of waterfall wall, which makes it look nice and beautiful. 
 
